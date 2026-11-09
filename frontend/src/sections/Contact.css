@@ -1,0 +1,28 @@
+.contact-section { border-top: 1px solid var(--line); background: radial-gradient(ellipse at 3% 70%,#7158a817,transparent 36%); }
+.contact-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 60px; }
+.contact-aside { position: relative; display: flex; min-height: 475px; flex-direction: column; padding: 29px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(150deg,#191720,#121117 78%); }
+.contact-aside::before { position: absolute; top: 45px; right: -99px; width: 235px; height: 235px; border: 1px solid #c7b1ee17; border-radius: 50%; box-shadow: 0 0 0 23px #c7b1ee08,0 0 0 46px #c7b1ee05; content: ''; }
+.contact-aside__label { color: var(--cyan); font: 8px var(--mono); letter-spacing: .12em; }
+.contact-aside h3 { position: relative; z-index: 1; margin: 29px 0 14px; font: 600 35px/1.22 var(--display); letter-spacing: -.06em; }.contact-aside h3 span { color: var(--cyan); }
+.contact-aside > p { max-width: 280px; margin: 0; color: #9792a1; font-size: 12px; line-height: 1.85; }
+.contact-email { position: relative; display: flex; align-items: center; gap: 10px; margin-top: 30px; color: #ded8e8; font-size: 11px; text-decoration: none; }
+.contact-email > span { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--line-bright); color: var(--cyan); }
+.contact-email > svg { margin-left: auto; color: #9e8acb; }.contact-email:hover { color: var(--cyan); }
+.contact-socials { display: flex; align-items: center; gap: 16px; margin-top: 27px; padding-top: 19px; border-top: 1px solid var(--line); }
+.contact-socials > span { margin-right: 5px; color: #777280; font: 8px var(--mono); letter-spacing: .12em; }
+.contact-socials a { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: #aaa5b2; background: rgba(255,255,255,.035); transition: color .2s, border-color .2s, transform .2s, background .2s; }
+.contact-socials a:hover { transform: translateY(-2px); border-color: var(--cyan); color: var(--cyan); background: rgba(6,182,212,.09); }
+.contact-aside__decoration { position: absolute; right: 29px; bottom: 70px; color: #c6b4ed3a; font-size: 45px; }
+.contact-aside__foot { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 19px; border-top: 1px solid var(--line); color: #777280; font: 8px var(--mono); letter-spacing: .08em; }
+.contact-form { padding: 27px 29px; border: 1px solid var(--line); background: rgba(255,255,255,.018); }
+.contact-form__top { display: flex; justify-content: space-between; margin-bottom: 23px; color: #85808e; font: 8px var(--mono); letter-spacing: .1em; }
+.contact-form label { display: block; margin-bottom: 17px; color: #d4cfdb; font-size: 10px; }
+.contact-form input,.contact-form textarea { display: block; width: 100%; margin-top: 8px; padding: 12px 13px; border: 1px solid #ffffff16; border-radius: 2px; outline: none; color: var(--ink); background: #0b0a0f75; font-size: 11px; transition: border-color .2s,background .2s; }
+.contact-form textarea { min-height: 96px; resize: vertical; }.contact-form input::placeholder,.contact-form textarea::placeholder { color: #716c7a; }
+.contact-form input:focus,.contact-form textarea:focus { border-color: #a58bd987; background: #121018; }
+.contact-submit { display: flex; width: 100%; min-height: 47px; align-items: center; justify-content: space-between; padding: 0 15px; border: 1px solid transparent; border-radius: 2px; color: #15121c; background: linear-gradient(110deg,#bba8f1,#88dbdc); font-size: 11px; font-weight: 600; cursor: pointer; transition: filter .2s,transform .2s; }
+.contact-submit:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.contact-success { display: flex; align-items: flex-start; gap: 8px; margin: 14px 0 0; color: #9edfc6; font-size: 11px; line-height: 1.6; }.contact-success svg { flex: 0 0 auto; }
+.contact-form__privacy { margin: 14px 0 0; color: #716c7a; font: 8px var(--mono); letter-spacing: .07em; }
+@media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; gap: 14px; }.contact-aside { min-height: 410px; } }
+@media (max-width: 420px) { .contact-aside,.contact-form { padding: 21px; }.contact-aside h3 { font-size: 31px; }.contact-form__top { font-size: 7px; } }

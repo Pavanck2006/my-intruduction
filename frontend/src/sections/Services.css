@@ -1,0 +1,16 @@
+.services-section { border-top: 1px solid var(--line); }
+.services-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.service-card { position: relative; display: flex; min-height: 226px; flex-direction: column; padding: 23px 25px 18px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(145deg,#ffffff04,#ffffff01); transition: border-color .25s,background .25s,transform .25s; }
+.service-card::after { position: absolute; top: -54px; right: -43px; width: 135px; height: 135px; border: 1px solid #d4c5f413; border-radius: 50%; box-shadow: 0 0 0 20px #d4c5f407,0 0 0 40px #d4c5f404; content: ''; }
+.service-card:hover { transform: translateY(-3px); border-color: #ad97e553; background: #a790e508; }
+.service-card__top { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; color: #8d8797; font: 8px var(--mono); letter-spacing: .1em; }
+.service-card__top svg { color: var(--cyan); }
+.service-card h3 { margin: 30px 0 9px; font: 500 18px var(--display); letter-spacing: -.025em; }
+.service-card p { max-width: 350px; margin: 0; color: #9893a1; font-size: 11px; line-height: 1.8; }
+.service-card__bottom { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 20px; color: #76717e; font: 8px var(--mono); letter-spacing: .08em; }
+.service-card__bottom a { display: grid; width: 29px; height: 29px; place-items: center; border: 1px solid var(--line-bright); color: #d2c6e9; transition: color .2s,border-color .2s; }
+.service-card__bottom a:hover { border-color: var(--cyan); color: var(--cyan); }
+.services-note { display: flex; align-items: center; gap: 12px; margin-top: 20px; padding: 17px 20px; border: 1px solid var(--line); color: #9893a1; background: rgba(255,255,255,.016); font-size: 11px; }
+.services-note__symbol { color: var(--cyan); font: 19px var(--display); }
+.services-note a { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; color: #c8b9ed; text-decoration: none; white-space: nowrap; }.services-note a:hover { color: var(--cyan); }
+@media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; gap: 9px; }.service-card { min-height: 205px; padding: 20px; }.services-note { align-items: flex-start; flex-wrap: wrap; }.services-note a { margin-left: 30px; } }

@@ -1,0 +1,33 @@
+.projects-section { background: linear-gradient(180deg,#0e0d12,#100f15 48%,#0e0d12); }
+.projects-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 31px 20px; }
+.project-card { min-width: 0; border: 1px solid var(--line); background: rgba(255,255,255,.014); transition: border-color .25s,transform .25s; }
+.project-card:hover { transform: translateY(-3px); border-color: #ae98e758; }
+.project-preview { position: relative; display: block; height: 250px; overflow: hidden; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+.preview-toolbar { position: absolute; z-index: 2; top: 12px; right: 13px; left: 13px; display: flex; align-items: center; gap: 5px; height: 26px; padding: 0 9px; border: 1px solid #ffffff19; border-radius: 3px; background: #111016b8; color: #aaa3b2; backdrop-filter: blur(8px); }
+.preview-toolbar > span { width: 5px; height: 5px; border-radius: 50%; background: #9d91b9; }.preview-toolbar > span:first-child { background: #cc8e9b; }.preview-toolbar > span:nth-child(2) { background: #c3ae78; }.preview-toolbar > span:nth-child(3) { background: #7fb99f; }
+.preview-toolbar i { flex: 1; margin-left: 9px; font: 7px var(--mono); font-style: normal; }
+.preview-scene { position: absolute; inset: 0; display: flex; align-items: center; overflow: hidden; padding: 53px 10%; background: linear-gradient(130deg,#232031,#14131b 75%); transition: filter .35s,transform .4s; }
+.project-preview:hover .preview-scene { filter: brightness(1.13); }
+.preview-copy { position: relative; z-index: 1; display: flex; width: 57%; flex-direction: column; align-items: flex-start; }
+.preview-copy small { color: #b0a1d6; font: 7px var(--mono); letter-spacing: .14em; }
+.preview-copy strong { margin-top: 11px; color: #e7e0f0; font: 600 clamp(18px,2.4vw,27px)/1.1 var(--display); letter-spacing: -.055em; }
+.preview-copy > span { margin-top: 8px; color: #a29bab; font-size: 9px; }
+.preview-copy i { display: flex; align-items: center; gap: 6px; margin-top: 16px; padding-bottom: 4px; border-bottom: 1px solid #a68edb; color: #d1c3ed; font: 7px var(--mono); font-style: normal; letter-spacing: .08em; }
+.preview-object { position: absolute; top: 50%; right: 11%; display: grid; width: 100px; height: 100px; place-items: center; border: 1px solid #c0addd3b; border-radius: 50%; color: #d9c9f5; background: linear-gradient(145deg,#c3a9ed28,#64ced517); box-shadow: 0 0 52px #b39ae51f,inset 0 0 30px #b29adc15; transform: translateY(-50%) rotate(-8deg); }
+.preview-object::before,.preview-object::after { position: absolute; inset: -11px; border: 1px solid #d5c6e824; border-radius: 50%; content: ''; }.preview-object::after { inset: -22px; border-style: dashed; opacity: .7; }
+.preview-stamp { position: absolute; right: 15px; bottom: 15px; color: #aaa2b5; font: 8px var(--mono); }
+.preview-decor { position: absolute; border-radius: 50%; filter: blur(1px); }.preview-decor--one { top: -72px; right: -43px; width: 220px; height: 220px; border: 1px solid #d4c3f11f; box-shadow: 0 0 0 24px #b4a0e509,0 0 80px #9175bf17; }
+.preview-decor--two { bottom: -115px; left: 20%; width: 235px; height: 170px; background: #865ec31c; filter: blur(34px); }
+.project-card--shop .preview-scene { background: linear-gradient(130deg,#28221f,#191616 75%); }.project-card--shop .preview-object { border-color:#d6b4865c; color:#e7c89f; background:linear-gradient(145deg,#eacb9f30,#b77d3514); }.project-card--shop .preview-decor--two { background:#bd84551c; }
+.project-card--weather .preview-scene { background: linear-gradient(130deg,#1c292f,#12191d 75%); }.project-card--weather .preview-object { border-color:#91d1d25c; color:#9fe0dd; background:linear-gradient(145deg,#9ad9d52d,#5480b71a); }.project-card--weather .preview-decor--two { background:#5aa9b61d; }
+.project-card--tasks .preview-scene { background: linear-gradient(130deg,#202a28,#131917 75%); }.project-card--tasks .preview-object { border-color:#a6d2b05c; color:#b5e0bb; background:linear-gradient(145deg,#b8e3b728,#568f6719); }.project-card--tasks .preview-decor--two { background:#68a7771a; }
+.preview-hint { position: absolute; right: 15px; bottom: 13px; z-index: 2; display: flex; align-items: center; gap: 6px; color: #ded9e8; font: 7px var(--mono); letter-spacing: .09em; opacity: 0; transition: opacity .2s; }.project-preview:hover .preview-hint { opacity: 1; }
+.project-info { padding: 19px 21px 18px; }.project-info__heading { display: flex; align-items: center; gap: 10px; color: #8a8492; }.project-info__heading > svg { margin-left: auto; color: #a696ce; }
+.project-number,.project-type { font: 8px var(--mono); letter-spacing: .1em; }.project-number { color: var(--cyan); }.project-type { color: #827d8b; }
+.project-info h3 { margin: 14px 0 7px; font: 600 19px var(--display); letter-spacing: -.035em; }.project-info > p { min-height: 52px; margin: 0; color: #96919f; font-size: 11px; line-height: 1.7; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }.project-tags span { padding: 5px 8px; border: 1px solid #ffffff12; color: #a8a2b1; font: 8px var(--mono); }
+.project-links { display: flex; gap: 19px; margin-top: 17px; padding-top: 13px; border-top: 1px solid var(--line); }.project-links a { display: inline-flex; align-items: center; gap: 6px; color: #d0c8de; font-size: 10px; text-decoration: none; transition: color .2s; }.project-links a:hover { color: var(--cyan); }
+.projects-more { display: flex; justify-content: space-between; margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); color: #777280; font: 8px var(--mono); letter-spacing: .09em; }
+.projects-more a { display: inline-flex; align-items: center; gap: 7px; color: #c5b7e9; font: 10px 'DM Sans',sans-serif; letter-spacing: 0; text-decoration: none; }
+@media (max-width: 700px) { .projects-grid { grid-template-columns: 1fr; gap: 19px; }.project-preview { height: 230px; }.preview-copy strong { font-size: 25px; }.project-info > p { min-height: auto; } }
+@media (max-width: 420px) { .project-preview { height: 205px; }.preview-object { right: 9%; width: 83px; height: 83px; }.project-info { padding-inline: 16px; }.projects-more { align-items: flex-start; gap: 15px; flex-direction: column; } }

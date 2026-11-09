@@ -1,0 +1,42 @@
+.shell { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+.skip-link {
+  position: fixed; z-index: 20; top: 10px; left: 10px; padding: 10px 14px;
+  transform: translateY(-150%); color: #111; background: var(--cyan);
+}
+.skip-link:focus { transform: translateY(0); }
+.section { position: relative; padding: 126px 0; scroll-margin-top: 65px; }
+.section-title { max-width: 700px; margin-bottom: 53px; }
+.section-title__meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
+.eyebrow, .section-title__number {
+  font: 10px/1.4 var(--mono); letter-spacing: .13em; color: var(--muted);
+}
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 11px #78e3e388; }
+.section-title h2 {
+  margin: 0; font: 600 clamp(34px, 5vw, 56px)/1.12 var(--display);
+  letter-spacing: -.055em;
+}
+.section-title h2 span {
+  color: #b7a5eb;
+  background: linear-gradient(105deg, #c0aaff 8%, #a48fe2 48%, #81d8dc 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.section-title > p { max-width: 490px; margin: 16px 0 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
+.button {
+  display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 14px;
+  padding: 0 20px; border: 1px solid transparent; border-radius: 3px; text-decoration: none;
+  font-size: 12px; font-weight: 600; transition: background .25s, color .25s, border-color .25s, transform .25s;
+}
+.button:hover { transform: translateY(-2px); }
+.button--primary { color: #121019; background: linear-gradient(110deg, #bba8f1, #88dbdc); box-shadow: 0 5px 25px #9d8be31f; }
+.button--primary:hover { box-shadow: 0 8px 32px #9d8be343; }
+.button--text { border-color: var(--line-bright); color: var(--ink); background: rgba(255,255,255,.025); }
+.button--text:hover { border-color: #b9a2ef8c; background: #b9a2ef0d; }
+
+@media (max-width: 700px) {
+  .shell { width: min(100% - 40px, 540px); }
+  .section { padding: 88px 0; }
+  .section-title { margin-bottom: 35px; }
+  .section-title h2 { font-size: clamp(32px, 9vw, 44px); }
+  .section-title > p { font-size: 14px; }
+}
