@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 import './Navbar.css'
 
 const links = [
@@ -11,7 +12,7 @@ const links = [
   ['Contact', '#contact'],
 ]
 
-function Navbar() {
+function Navbar({ theme, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const closeMenu = () => setMenuOpen(false)
@@ -23,16 +24,19 @@ function Navbar() {
           <span className="brand__symbol">M<span>.</span></span>
           <span className="brand__name">MYPORTFOLIO</span>
         </a>
-        <button
-          className="navbar__toggle"
-          type="button"
-          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-          aria-expanded={menuOpen}
-          aria-controls="primary-navigation"
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          {menuOpen ? <X size={21} /> : <Menu size={21} />}
-        </button>
+        <div className="navbar__right">
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          <button
+            className="navbar__toggle"
+            type="button"
+            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? <X size={21} /> : <Menu size={21} />}
+          </button>
+        </div>
         <div className={`navbar__links${menuOpen ? ' is-open' : ''}`} id="primary-navigation">
           {links.map(([label, target], index) => (
             <a key={target} className={index === 0 ? 'navbar__link navbar__link--home' : 'navbar__link'} href={target} onClick={closeMenu}>

@@ -1,11 +1,12 @@
-.site-header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid rgba(255,255,255,.065); background: rgba(12,11,16,.78); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.site-header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid var(--line); background: var(--navbar-bg); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); transition: background .35s ease, border-color .35s ease; }
 .navbar { display: flex; height: 73px; align-items: center; justify-content: space-between; }
+.navbar__right { display: flex; align-items: center; gap: 10px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand__symbol { color: #eee9fa; font: 800 24px/1 var(--display); letter-spacing: -.1em; }
+.brand__symbol { color: var(--ink); font: 800 24px/1 var(--display); letter-spacing: -.1em; transition: color .35s ease; }
 .brand__symbol > span { color: var(--cyan); }
-.brand__name { color: #d3cfdf; font: 500 10px/1 var(--mono); letter-spacing: .14em; }
+.brand__name { color: var(--muted); font: 500 10px/1 var(--mono); letter-spacing: .14em; transition: color .35s ease; }
 .navbar__links { display: flex; height: 100%; align-items: center; gap: 30px; }
-.navbar__link { position: relative; color: #a7a3b1; font-size: 11px; text-decoration: none; transition: color .2s; }
+.navbar__link { position: relative; color: var(--quiet); font-size: 11px; text-decoration: none; transition: color .2s; }
 .navbar__link::after { position: absolute; right: 0; bottom: -7px; left: 0; height: 1px; background: var(--cyan); content: ''; transform: scaleX(0); transform-origin: left; transition: transform .2s; }
 .navbar__link:hover, .navbar__link--home { color: var(--ink); }
 .navbar__link:hover::after { transform: scaleX(1); }
@@ -15,7 +16,7 @@
 @media (max-width: 760px) {
   .navbar { height: 66px; }
   .navbar__toggle { display: grid; width: 42px; height: 42px; place-items: center; cursor: pointer; }
-  .navbar__links { position: absolute; top: 65px; right: 0; left: 0; display: none; height: auto; align-items: stretch; gap: 0; padding: 12px 20px 20px; border-bottom: 1px solid var(--line); background: rgba(15,14,20,.98); }
+  .navbar__links { position: absolute; top: 65px; right: 0; left: 0; display: none; height: auto; align-items: stretch; gap: 0; padding: 12px 20px 20px; border-bottom: 1px solid var(--line); background: var(--navbar-mobile-bg); }
   .navbar__links.is-open { display: flex; flex-direction: column; }
   .navbar__link { padding: 14px 5px; border-bottom: 1px solid var(--line); font-size: 13px; }
   .navbar__link::after { display: none; }

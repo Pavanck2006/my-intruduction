@@ -24,5 +24,26 @@
 .contact-submit:hover { filter: brightness(1.08); transform: translateY(-1px); }
 .contact-success { display: flex; align-items: flex-start; gap: 8px; margin: 14px 0 0; color: #9edfc6; font-size: 11px; line-height: 1.6; }.contact-success svg { flex: 0 0 auto; }
 .contact-form__privacy { margin: 14px 0 0; color: #716c7a; font: 8px var(--mono); letter-spacing: .07em; }
+/* ── Light theme overrides ── */
+[data-theme="light"] .contact-section { background: radial-gradient(ellipse at 3% 70%, rgba(139, 92, 246, .05), transparent 36%); }
+[data-theme="light"] .contact-aside { background: linear-gradient(150deg, #eef0f5, #e4e7ee 78%); }
+[data-theme="light"] .contact-aside::before { border-color: rgba(139, 92, 246, .08); box-shadow: 0 0 0 23px rgba(139, 92, 246, .03), 0 0 0 46px rgba(139, 92, 246, .02); }
+[data-theme="light"] .contact-aside > p { color: var(--muted); }
+[data-theme="light"] .contact-email { color: var(--ink); }
+[data-theme="light"] .contact-email > svg { color: #7c6bab; }
+[data-theme="light"] .contact-socials > span { color: var(--quiet); }
+[data-theme="light"] .contact-socials a { color: var(--muted); background: rgba(0, 0, 0, .03); }
+[data-theme="light"] .contact-socials a:hover { color: var(--cyan); border-color: var(--cyan); background: rgba(6, 182, 212, .06); }
+[data-theme="light"] .contact-aside__decoration { color: rgba(139, 92, 246, .12); }
+[data-theme="light"] .contact-aside__foot { color: var(--quiet); }
+[data-theme="light"] .contact-form { background: var(--card-bg); }
+[data-theme="light"] .contact-form__top { color: var(--quiet); }
+[data-theme="light"] .contact-form label { color: var(--ink); }
+[data-theme="light"] .contact-form input, [data-theme="light"] .contact-form textarea { border-color: var(--line); background: var(--input-bg); color: var(--ink); }
+[data-theme="light"] .contact-form input::placeholder, [data-theme="light"] .contact-form textarea::placeholder { color: var(--quiet); }
+[data-theme="light"] .contact-form input:focus, [data-theme="light"] .contact-form textarea:focus { border-color: rgba(139, 92, 246, .35); background: var(--input-focus-bg); }
+[data-theme="light"] .contact-success { color: #2d8a5e; }
+[data-theme="light"] .contact-form__privacy { color: var(--quiet); }
+
 @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; gap: 14px; }.contact-aside { min-height: 410px; } }
 @media (max-width: 420px) { .contact-aside,.contact-form { padding: 21px; }.contact-aside h3 { font-size: 31px; }.contact-form__top { font-size: 7px; } }

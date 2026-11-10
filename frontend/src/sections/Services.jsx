@@ -4,7 +4,7 @@ import SectionTitle from '../components/SectionTitle'
 import './Services.css'
 
 const services = [
-  { icon: Code2, number: '01', title: 'Frontend development', text: 'Fast, accessible, carefully built interfaces that make the most of modern web technology.', detail: 'REACT · JAVASCRIPT · CSS' },
+  { icon: Code2, number: '01', title: 'Full stack development', text: 'Fast, accessible, carefully built interfaces that make the most of modern web technology.', detail: 'REACT · JAVASCRIPT · CSS' },
   { icon: Smartphone, number: '02', title: 'Responsive web design', text: 'Flexible experiences that feel natural on every screen, from the first sketch to the final breakpoint.', detail: 'MOBILE · TABLET · DESKTOP' },
   { icon: LayoutPanelTop, number: '03', title: 'UI / UX design', text: 'Clear, human-centered flows and visual systems that help people get where they need to go.', detail: 'WIREFRAMES · PROTOTYPES · UI' },
   { icon: RefreshCw, number: '04', title: 'Website redesign', text: 'A fresh perspective for existing sites, with better usability, sharper visuals, and a solid foundation.', detail: 'AUDIT · REFRESH · REBUILD' },

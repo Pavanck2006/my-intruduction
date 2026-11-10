@@ -24,6 +24,28 @@
 .highlight-card:hover { transform: translateY(-4px); border-color: #a78bfa52; background: #b09ae60a; }
 .highlight-card > svg { grid-row: span 2; margin-top: 3px; color: var(--cyan); }.highlight-card strong { color: #eeeaf5; font: 600 26px var(--display); letter-spacing: -.04em; }
 .highlight-card > span { margin-top: 3px; color: #c8c2d1; font-size: 11px; }.highlight-card small { grid-column: 2; margin-top: 13px; color: #797585; font-size: 10px; }
+/* ── Light theme overrides ── */
+[data-theme="light"] .about-section { background: linear-gradient(180deg, rgba(238, 240, 245, .55), rgba(248, 249, 252, .2)); }
+[data-theme="light"] .about-portrait { background: radial-gradient(ellipse at 49% 62%, rgba(139, 92, 246, .08), transparent 42%), linear-gradient(145deg, #eef0f5, #e4e7ee); }
+[data-theme="light"] .about-portrait::before { border-color: rgba(139, 92, 246, .08); }
+[data-theme="light"] .about-portrait__top { color: var(--muted); }
+[data-theme="light"] .about-portrait__caption { color: var(--muted); }
+[data-theme="light"] .about-portrait__monogram { color: #5a4a8a; text-shadow: 0 0 50px rgba(139, 92, 246, .15); }
+[data-theme="light"] .about-orb { border-color: rgba(139, 92, 246, .1); }
+[data-theme="light"] .about-caption { color: var(--muted); }
+[data-theme="light"] .about-copy h3 span { color: var(--muted); }
+[data-theme="light"] .about-copy > p { color: var(--muted); }
+[data-theme="light"] .about-interests { border-color: var(--line); }
+[data-theme="light"] .about-interests > span { color: var(--quiet); }
+[data-theme="light"] .about-interests > div { color: var(--ink); }
+[data-theme="light"] .about-link { color: #7c6bab; }
+[data-theme="light"] .about-link:hover { color: var(--cyan); }
+[data-theme="light"] .highlight-card { background: linear-gradient(145deg, rgba(0, 0, 0, .02), rgba(0, 0, 0, .005)); }
+[data-theme="light"] .highlight-card:hover { border-color: rgba(139, 92, 246, .2); background: rgba(139, 92, 246, .04); }
+[data-theme="light"] .highlight-card strong { color: var(--ink); }
+[data-theme="light"] .highlight-card > span { color: var(--muted); }
+[data-theme="light"] .highlight-card small { color: var(--quiet); }
+
 @media (max-width: 700px) {
   .about-grid { grid-template-columns: 1fr; gap: 32px; }.about-visual { width: 100%; max-width: none; }.about-portrait { height: 280px; }.about-copy h3 { font-size: 27px; }
   .about-highlights { gap: 8px; margin-top: 36px; }.highlight-card { min-height: 135px; grid-template-columns: 1fr; padding: 14px; }

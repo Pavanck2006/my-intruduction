@@ -32,8 +32,8 @@ function Footer() {
         </div>
       </div>
       <div className="footer__bottom shell">
-        <span>© {new Date().getFullYear()} Your Name. Designed with intention.</span>
-        <span className="footer__note">Frontend developer · web UI</span>
+        <span>© {new Date().getFullYear()} Pavan C K. Designed with intention.</span>
+        <span className="footer__note">Full Stack Developer · web UI</span>
         <a className="footer__top" href="#home">Back to top <ArrowUp size={14} /></a>
         <span className="footer__credit">Made to make an impression <ArrowUpRight size={13} /></span>
       </div>

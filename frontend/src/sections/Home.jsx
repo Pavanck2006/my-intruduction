@@ -1,13 +1,23 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowDown, Download, Image } from 'lucide-react'
 import Button from '../components/Button'
 import SocialIcon from '../components/SocialIcon'
 import { socialProfiles } from '../components/socialProfiles'
 import './Home.css'
 
+const titles = ['Full Stack Developer', 'Web Developer']
+
 function Home() {
   const [photoAvailable, setPhotoAvailable] = useState(true)
+  const [titleIndex, setTitleIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTitleIndex((prev) => (prev + 1) % titles.length)
+    }, 2500)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <section className="home-section" id="home">
@@ -21,8 +31,21 @@ function Home() {
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="home-greeting">HELLO, I&apos;M</p>
-          <h1>Your Name<span className="home-period">.</span></h1>
-          <p className="home-role">Frontend Developer</p>
+          <h1>Pavan C K<span className="home-period">.</span></h1>
+          <div className="home-role-wrapper">
+            <AnimatePresence mode="wait">
+              <motion.p
+                className="home-role"
+                key={titles[titleIndex]}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+              >
+                {titles[titleIndex]}
+              </motion.p>
+            </AnimatePresence>
+          </div>
           <p className="home-intro">
             I build thoughtful, responsive web experiences with React, JavaScript,
             and modern CSS. I love turning ideas into clear, accessible interfaces
@@ -34,7 +57,7 @@ function Home() {
               href="/resume.pdf"
               variant="text"
               icon={Download}
-              download="Your-Name-Resume.pdf"
+              download="Pavan-CK-Resume.pdf"
             >
               Download Resume
             </Button>
@@ -66,7 +89,7 @@ function Home() {
               <img
                 className="home-photo"
                 src="/profile.jpg"
-                alt="Portrait of Your Name"
+                alt="Portrait of Pavan C K"
                 onError={() => setPhotoAvailable(false)}
               />
             ) : (
@@ -77,7 +100,7 @@ function Home() {
               </div>
             )}
             <span className="home-photo-index">PROFILE <span>01 / 01</span></span>
-            <span className="home-photo-caption">FRONTEND DEVELOPER <i>✳</i> CREATIVE BUILDER</span>
+            <span className="home-photo-caption">FULL STACK DEVELOPER <i>✳</i> CREATIVE BUILDER</span>
           </div>
           <div className="home-photo-note"><span className="home-photo-note__dot" /> PROFILE PHOTO</div>
           <div className="home-photo-coordinate">DESIGN <span>✳</span> DEVELOP <span>✳</span> REFINE</div>

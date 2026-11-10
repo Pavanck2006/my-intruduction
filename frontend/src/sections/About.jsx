@@ -5,7 +5,7 @@ import './About.css'
 
 const highlights = [
   { icon: Code2, value: 'UI', label: 'Design with purpose', note: 'Clear, human-centered interfaces' },
-  { icon: Layers3, value: 'Web', label: 'Frontend development', note: 'Responsive, accessible experiences' },
+  { icon: Layers3, value: 'Web', label: 'Full stack development', note: 'Responsive, accessible experiences' },
   { icon: Sparkles, value: 'Grow', label: 'Keep learning', note: 'Curiosity in every project' },
 ]
 
@@ -19,7 +19,7 @@ function About() {
             <div className="about-portrait">
               <span className="about-portrait__top">A WORK IN PROGRESS <span>✳</span></span>
               <div className="about-orb about-orb--one" /><div className="about-orb about-orb--two" />
-              <span className="about-portrait__monogram">Y<span>.</span>N</span>
+              <span className="about-portrait__monogram">P<span>.</span>CK</span>
               <span className="about-portrait__caption">CURIOUS BY NATURE<br />CREATIVE BY DESIGN</span>
             </div>
             <div className="about-caption"><span>01 — A portrait in progress</span><ArrowUpRight size={14} /></div>
@@ -27,9 +27,8 @@ function About() {
           <div className="about-copy">
             <span className="about-overline">THE PERSON BEHIND THE PIXELS</span>
             <h3>Good design isn&apos;t decoration.<br /><span>It&apos;s how things make sense.</span></h3>
-            <p>I&apos;m Your Name, a frontend developer and creative designer drawn to the space where technology meets human experience. I love turning complex ideas into clear, inviting interfaces that feel a little bit special.</p>
-            <p>My journey started with a curiosity about how websites work, and grew into a practice of building them with intention. These days, I&apos;m always learning a new tool, refining a detail, or sketching what could come next.</p>
-            <p>My goal is to create accessible, responsive web products while continuing to grow as a frontend developer.</p>
+            <p>Hi, I&apos;m Pavan C K, an Information Science and Engineering student with a passion for software development and technology. I enjoy exploring different areas of programming, developing web applications, and turning creative ideas into practical solutions.</p>
+            <p>I&apos;m particularly interested in full-stack development, backend technologies, database management, and building useful software projects. I believe in learning by doing, and I continuously work on strengthening my technical knowledge through hands-on development and problem-solving.</p>
             <div className="about-interests"><span>OFF-SCREEN, I&apos;M INTO</span><div><span>✳ Typography</span><span>✳ Music</span><span>✳ New places</span></div></div>
             <a className="about-link" href="#contact">A little more about my approach <ArrowDownRight size={15} /></a>
           </div>

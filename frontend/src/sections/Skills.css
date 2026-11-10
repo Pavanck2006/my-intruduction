@@ -15,5 +15,22 @@
 .skill-card__line { position: absolute; right: 20px; bottom: 17px; left: 20px; height: 1px; background: #ffffff10; }.skill-card__line span { display: block; width: 38%; height: 1px; background: linear-gradient(90deg,#a995df,#7de0dc); }
 .skill-card:nth-child(3n) .skill-card__line span { width: 50%; }.skill-card:nth-child(4n) .skill-card__line span { width: 31%; }
 .skills-footer { display: flex; justify-content: space-between; margin-top: 20px; color: #777280; font: 8px var(--mono); letter-spacing: .11em; }
+/* ── Light theme overrides ── */
+[data-theme="light"] .skills-section { background: radial-gradient(ellipse at 10% 70%, rgba(139, 92, 246, .03), transparent 38%); }
+[data-theme="light"] .skills-note { background: linear-gradient(145deg, #eef0f5, #e4e7ee); }
+[data-theme="light"] .skills-note::after { border-color: rgba(139, 92, 246, .08); box-shadow: 0 0 0 24px rgba(139, 92, 246, .03), 0 0 0 48px rgba(139, 92, 246, .02); }
+[data-theme="light"] .skills-note h3 { color: var(--ink); }
+[data-theme="light"] .skills-note p { color: var(--muted); }
+[data-theme="light"] .skills-note__footer { color: var(--quiet); }
+[data-theme="light"] .skills-note__spark { color: #7c6bab; }
+[data-theme="light"] .skill-card { background: var(--card-bg); }
+[data-theme="light"] .skill-card:hover { background: var(--card-bg-hover); border-color: rgba(139, 92, 246, .2); }
+[data-theme="light"] .skill-card::before { border-color: rgba(139, 92, 246, .08); }
+[data-theme="light"] .skill-card__top span { color: var(--quiet); }
+[data-theme="light"] .skill-card h3 { color: var(--ink); }
+[data-theme="light"] .skill-card p { color: var(--muted); }
+[data-theme="light"] .skill-card__line { background: rgba(0, 0, 0, .06); }
+[data-theme="light"] .skills-footer { color: var(--quiet); }
+
 @media (max-width: 760px) { .skills-layout { grid-template-columns: 1fr; }.skills-note { min-height: 230px; padding: 27px; }.skills-note__footer { left: 27px; } }
 @media (max-width: 430px) { .skills-grid { gap: 8px; }.skill-card { min-height: 145px; padding: 15px; }.skill-card__line { right: 15px; left: 15px; }.skills-footer { font-size: 7px; letter-spacing: .04em; } }

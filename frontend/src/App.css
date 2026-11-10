@@ -33,6 +33,14 @@
 .button--text { border-color: var(--line-bright); color: var(--ink); background: rgba(255,255,255,.025); }
 .button--text:hover { border-color: #b9a2ef8c; background: #b9a2ef0d; }
 
+/* ── Light theme overrides ── */
+[data-theme="light"] .button--text { background: rgba(0, 0, 0, .03); }
+[data-theme="light"] .button--text:hover { background: rgba(139, 92, 246, .06); }
+[data-theme="light"] .section-title h2 span {
+  background: linear-gradient(105deg, #7c5cc0 8%, #6a4fb5 48%, #0e8fa0 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+
 @media (max-width: 700px) {
   .shell { width: min(100% - 40px, 540px); }
   .section { padding: 88px 0; }
